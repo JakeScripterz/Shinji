@@ -6,3 +6,5 @@ getgenv().night= true -- set true if you want to day to night
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Shinji%20tp%20exploit'))()
 task.wait(0.1)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JakeScripterz/Shinji/refs/heads/main/Shinji%20VFX"))()
+task.wait(0.1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JakeScripterz/Shinji/refs/heads/main/Shinji.Ogg"))()

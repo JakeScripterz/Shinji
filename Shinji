@@ -1,6 +1,6 @@
 getgenv().speedtools = true --- set true if you want use this tool if you want to run
 getgenv().speedpunch= true --- tp and normal Punch
-getgenv().dance= true --- set true if you want to this dance song made by rebzyyx all I want is you 
+getgenv().dance= false --- set true if you want to this dance song made by rebzyyx all I want is you 
 getgenv().night= true -- set true if you want to day to night 
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Shinji%20tp%20exploit'))()

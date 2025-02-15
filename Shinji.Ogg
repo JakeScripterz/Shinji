@@ -1,0 +1,34 @@
+-- Create a Sound instance that will play continuously
+local RepeatingMusic = Instance.new("Sound")
+RepeatingMusic.Name = "Shinji BGM"
+
+-- You'll need to replace this ID with your desired audio ID from Roblox
+RepeatingMusic.SoundId = "rbxassetid://76168804721858" -- Replace with your audio ID
+
+-- Set sound properties
+RepeatingMusic.Volume = 1
+RepeatingMusic.Looped = true -- Makes the sound loop continuously
+RepeatingMusic.Playing = true -- Starts playing immediately
+
+-- Parent the sound to a stable location (like Workspace)
+RepeatingMusic.Parent = game.Workspace
+
+-- Make sure the sound keeps playing
+local function EnsurePlaying()
+    while true do
+        if not RepeatingMusic.Playing then
+            RepeatingMusic.Playing = true
+        end
+        wait(1) -- Check every second
+    end
+end
+
+-- Start the monitoring loop
+spawn(EnsurePlaying)
+
+-- Prevent other scripts from stopping the sound
+RepeatingMusic:GetPropertyChangedSignal("Playing"):Connect(function()
+    if not RepeatingMusic.Playing then
+        RepeatingMusic.Playing = true
+    end
+end)
